@@ -23,4 +23,4 @@ req.on 'response', (response) ->
   response.setEncoding('utf-8')
   response.on 'data', (chunk) ->
     parser.parseString chunk, (err, result) ->
-      console.log(result)
+      console.log(result.weather.current_conditions.condition['@'].data)
